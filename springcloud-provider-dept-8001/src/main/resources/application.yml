@@ -17,3 +17,16 @@ spring:
     username: root
     password: root
     driver-class-name: org.gjt.mm.mysql.Driver
+
+# eureka的配置,服务注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: springcloud-provider-dept-8001
+
+
+info:
+  app.name: server-8001
+  company.name: rich

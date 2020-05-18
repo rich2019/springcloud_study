@@ -9,6 +9,9 @@
     <modules>
         <module>springcloud-api</module>
         <module>springcloud-provider-dept-8001</module>
+        <module>springcloud-customer-dept-80</module>
+        <module>springcloud-eureka-7001</module>
+        <module>springcloud-customer-hystrix-dashboard</module>
     </modules>
     <name>springcloud_study</name>
 
