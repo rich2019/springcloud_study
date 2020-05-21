@@ -1,0 +1,28 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: zuul-9527
+    prefer-ip-address: true
+
+
+
+
+info:
+  name: cd
+  company: supconit
+
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-dept
+    mydept.path: /dept/**  # 配置映射的路径,浏览器地址栏写dept可替代springcloud-provider-dept
+  ignored-services: "*"  # 忽略全部的
+  prefix: /cd   #配置公共的前缀名
+#  ignored-services: springcloud-provider-dept  # 不能在使用springcloud-provider-dept路径访问了
